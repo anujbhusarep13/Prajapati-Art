@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prajapati Art | Handmade Murtis</title>
+
+    <meta name="description"
+        content="Prajapati Art - Handmade Ganesh and Durga murtis made with traditional artistic designs.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8ed;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #8b2f00, #d65a00);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #5c1f00;
+            padding: 14px 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 12px;
+        }
+
+        nav a:hover {
+            color: #ffd27f;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 55px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #8b2f00;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* BUTTON */
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #8b2f00;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #c44b00;
+        }
+
+        /* PRODUCTS */
+        .products {
+            max-width: 1100px;
+            margin: 30px auto 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #8b2f00;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        /* GALLERY */
+        .gallery {
+            max-width: 1100px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        /* ABOUT */
+        .about-box {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        /* CONTACT */
+        .contact-box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .contact-box p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .contact-box a {
+            color: #8b2f00;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #5c1f00;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 7px;
+                font-size: 14px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery img {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="home">
+        <h1>🙏 Prajapati Art</h1>
+        <p>Beautiful Handmade Clay Murtis</p>
+
+        <a href="#products" class="button">
+            View Our Murtis
+        </a>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- HOME -->
+    <section>
+        <h2>Welcome to Prajapati Art</h2>
+
+        <p class="intro">
+            Welcome to Prajapati Art. We create beautiful handmade
+            clay murtis with traditional artistic designs.
+            Ganesh ji and Durga Mata murtis are available.
+        </p>
+
+        <a href="#contact" class="button">
+            Contact Us
+        </a>
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section id="products">
+
+        <h2>Our Products</h2>
+
+        <div class="products">
+
+            <!-- GANESH -->
+            <div class="card">
+
+                <!-- Change ganesh.jpg to your image filename -->
+                <img
+                    src="ganesh.jpg"
+                    alt="Ganesh Murti"
+                    class="product-image"
+                >
+
+                <div class="card-content">
+
+                    <h3>Ganesh Murti</h3>
+
+                    <p>
+                        Beautiful handmade Ganesh ji murti
+                        made with artistic traditional designs.
+                    </p>
+
+                    <a
+                        href="https://wa.me/919755290364?text=Hello%20Prajapati%20Art,%20I%20want%20to%20know%20about%20Ganesh%20Murti."
+                        class="button"
+                        target="_blank"
+                    >
+                        Enquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- DURGA -->
+            <div class="card">
+
+                <!-- Change durga.jpg to your image filename -->
+                <img
+                    src="durga.jpg"
+                    alt="Durga Mata Murti"
+                    class="product-image"
+                >
+
+                <div class="card-content">
+
+                    <h3>Durga Murti</h3>
+
+                    <p>
+                        Beautiful handmade Durga Mata murti
+                        created with traditional artistic work.
+                    </p>
+
+                    <a
+                        href="https://wa.me/919755290364?text=Hello%20Prajapati%20Art,%20I%20want%20to%20know%20about%20Durga%20Murti."
+                        class="button"
+                        target="_blank"
+                    >
+                        Enquire on WhatsApp
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- GALLERY -->
+    <section id="gallery">
+
+        <h2>Our Gallery</h2>
+
+        <p>
+            Some of our handmade artwork.
+        </p>
+
+        <div class="gallery">
+
+            <!-- Change these filenames to your photos -->
+            <img src="ganesh.jpg" alt="Ganesh artwork">
+
+            <img src="IMG-20260904-WA0006.jpg" alt="Durga artwork">
+
+            <img src="IMG-20260904-WA0007jpg" alt="Prajapati Art">
+
+            <img src="IMG-20260904-WA0009.jpg" alt="Handmade Murti">
+
+            <img src="IMG-20260904-WA0017.jpg" alt="Clay Murti">
+
+            <img src="IMG-20260904-WA0010.jpg" alt="Traditional Art">
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2>About Prajapati Art</h2>
+
+        <div class="about-box">
+
+            <p>
+                Prajapati Art is dedicated to creating beautiful
+                handmade clay murtis and traditional artwork.
+            </p>
+
+            <br>
+
+            <p>
+                Our collection includes Ganesh ji and Durga Mata
+                murtis made with care and artistic detail.
+            </p>
+
+            <br>
+
+            <p>
+                📍 Teegaon, Madhya Pradesh
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-box">
+
+            <p>
+                📱 WhatsApp:
+                <a href="https://wa.me/919755290364" target="_blank">
+                    9755290364
+                </a>
+            </p>
+
+            <p>
+                📸 Instagram:
+                <a
+                    href="https://www.instagram.com/prajapati_art.01/"
+                    target="_blank"
+                >
+                    @prajapati_art.01
+                </a>
+            </p>
+
+            <p>
+                📍 Location: Teegaon, Madhya Pradesh
+            </p>
+
+            <a
+                href="https://wa.me/919755290364"
+                target="_blank"
+                class="button"
+            >
+                💬 Chat on WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Prajapati Art. All Rights Reserved.
+        </p>
+
+        <p>
+            Handmade with ❤️
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Welcome message
+        console.log("Welcome to Prajapati Art!");
+
+        // Show message when page loads
+        window.addEventListener("load", function() {
+            console.log("Prajapati Art website loaded successfully.");
+        });
+
+    </script>
+
+</body>
+</html>
